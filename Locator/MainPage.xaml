@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Locator.MainPage">
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Menu" BackgroundColor="#F5F5F5">
+            <StackLayout Padding="10">
+                <Button Text="Home" Command="{Binding NavigateCommand}" CommandParameter="HomePage" />
+                <Button Text="Settings" Command="{Binding NavigateCommand}" CommandParameter="SettingsPage" />
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+
+    <!-- Detail Content -->
+    <FlyoutPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <ContentPage Title="Welcome">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label Text="Welcome to FlyoutPage Demo!" HorizontalOptions="Center" />
+                    </StackLayout>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+    <!--Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+            <Label
+                x:Name="lblCoordinates"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                Grid.Row="0"
+                />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill"
+                Grid.Row="1"/>
+    </Grid-->
+
+</FlyoutPage>
