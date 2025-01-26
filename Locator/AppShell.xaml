@@ -10,12 +10,12 @@
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" /-->
-    <FlyoutItem Title="Home" Icon="home.png">
-        <ShellContent Title="Home" ContentTemplate="{DataTemplate local:HomePage}" />
+    <FlyoutItem Title="First" >
+        <ShellContent Title="Home" ContentTemplate="{DataTemplate local:FirstPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Settings" Icon="settings.png">
-        <ShellContent Title="Settings" ContentTemplate="{DataTemplate local:SettingsPage}" />
+    <FlyoutItem Title="Second" >
+        <ShellContent Title="Settings" ContentTemplate="{DataTemplate local:SecondPage}" />
     </FlyoutItem>
 
 </Shell>

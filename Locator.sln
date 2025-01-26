@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locator", "Locator\Locator.csproj", "{F08EFBD8-6E07-4766-996F-091A69A09C0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommLib", "CommLib\CommLib.csproj", "{554FD3A9-FB3D-4B7B-9959-712E352A425D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,10 @@ Global
 		{F08EFBD8-6E07-4766-996F-091A69A09C0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F08EFBD8-6E07-4766-996F-091A69A09C0B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F08EFBD8-6E07-4766-996F-091A69A09C0B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{554FD3A9-FB3D-4B7B-9959-712E352A425D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{554FD3A9-FB3D-4B7B-9959-712E352A425D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{554FD3A9-FB3D-4B7B-9959-712E352A425D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{554FD3A9-FB3D-4B7B-9959-712E352A425D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
