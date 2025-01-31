@@ -1,4 +1,6 @@
-﻿namespace Locator
+﻿using Locator.Views;
+using Microsoft.Maui.Controls;
+namespace Locator
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppFlyoutPage();
+            MainPage = new FlyoutSamplePage();
         }
     }
 }

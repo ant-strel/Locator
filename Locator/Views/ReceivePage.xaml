@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Locator.SecondPage"
-             Title="SecondPage">
-    <VerticalStackLayout VerticalOptions="Center"
-                         HorizontalOptions="Center">
+             x:Class="Locator.Views.ReceivePage"
+             Title="ReceivePage">
+    <VerticalStackLayout>
         <Label 
-            Text="Second Page"
+            Text="Welcome to ReceivePage"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>

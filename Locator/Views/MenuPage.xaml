@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Locator.Views.MenuPage"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
+             Title="MenuPage">
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                Spacing="10" Margin="10,20">
+
+        <HorizontalStackLayout HorizontalOptions="Start" >
+            <Label FontSize="25" TextColor="Black"
+               FontAttributes="Bold"  VerticalOptions="Center" HorizontalOptions="Start" Text="Menu"/>
+        </HorizontalStackLayout>
+
+        <BoxView HeightRequest="1" BackgroundColor="White"/>
+
+        <CollectionView x:Name="collectionViewFlyout"
+                    x:FieldModifier="public"
+                    SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="5,10" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="1"
+                           Margin="20,0"
+                           Text="{Binding Title}"
+                           FontSize="20" TextColor="Black"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center" />
+
+                    </Grid>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <BoxView HeightRequest="1" BackgroundColor="White"/>
+
+        <StackLayout VerticalOptions="EndAndExpand">
+            <Label Text=".Net MAUI Virendra Thakur"
+               TextColor="Black"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+            <Label Text="{Binding Source={x:Static system:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}"
+               TextColor="Black"
+               HorizontalOptions="Center" />
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

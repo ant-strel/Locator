@@ -2,8 +2,9 @@ syntax = "proto3";
 
 package geo.v1;
 
-import "api/type/v1/latlng.proto";
+import "api/dto/v1/latlng.proto";
 import "google/protobuf/timestamp.proto";
+
 
 service GeoService {
   rpc LocateByUUID (LocateByUUIDRequest) returns (LocateByUUIDResponse) {}
@@ -15,13 +16,13 @@ message LocateByUUIDRequest {
 }
 
 message LocateByUUIDResponse {
-  type.v1.LatLng latlng = 1;
+  dto.v1.LatLng latlng = 1;
   google.protobuf.Timestamp deadline = 2;
 }
 
 message TrackRequest {
   string uuid = 1;
-  type.v1.LatLng latlng = 2;
+  dto.v1.LatLng latlng = 2;
 }
 
 message TrackResponse {}

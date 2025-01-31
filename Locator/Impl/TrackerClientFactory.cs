@@ -1,14 +1,11 @@
-﻿namespace CommLib
+﻿namespace CommunicationLib.Impl
 {
     public class TrackerClientFactory
     {
-        private static GrpcTrackerClient? _instance;
+        private static GrpcTrackerClient _instance;
         public static GrpcTrackerClient Create(string address, int port)
         {
-            if (_instance == null)
-            {
-                _instance = new GrpcTrackerClient(address,port);
-            }
+            _instance ??= new GrpcTrackerClient(address, port);
             return _instance;
         }
 

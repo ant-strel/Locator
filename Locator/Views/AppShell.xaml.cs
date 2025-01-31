@@ -1,4 +1,6 @@
-﻿namespace Locator
+﻿using Microsoft.Maui.Controls;
+
+namespace Locator
 {
     public partial class AppShell : Shell
     {

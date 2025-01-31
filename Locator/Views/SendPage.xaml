@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Locator.VMs"
+             x:Class="Locator.Views.SendPage"
+             Title="SendPage">
+
+    <ContentPage.BindingContext>
+        <local:SendViewModel/>
+    </ContentPage.BindingContext>
+    <VerticalStackLayout HorizontalOptions="Center"
+                         VerticalOptions="Center">
+        <Label Margin="2,2,2,2" Text="uuid" />
+        <Label Margin="2,2,2,2" Text="{Binding UUID}" />
+        <Label Margin="2,2,2,2" Text="longtitude"/>
+        <Label Margin="2,2,2,2" Text="{Binding Longtitude}" />
+        <Label Margin="2,2,2,2" Text="latitude"/>
+        <Label Margin="2,2,2,2" Text="{Binding Latitude}" />
+        <Button Margin="2,2,2,2" Text="Send" Command="{Binding SendLocationCommand}"/>
+        <Button Margin="2,2,2,2" Text="Start Timer" Command="{Binding StartLocationTimerCommand}"/>
+        <Button Margin="2,2,2,2" Text="StopTimer" Command="{Binding StopLocationTimer}"/>
+    </VerticalStackLayout>
+</ContentPage>

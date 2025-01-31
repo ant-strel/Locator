@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package type.v1;
+package dto.v1;
 
 message LatLng {
   double latitude = 1;

@@ -1,15 +1,12 @@
 ﻿using Geo.V1;
 using Grpc.Net.Client;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Type.V1;
+using Dto.V1;
 
-namespace CommLib
+namespace CommunicationLib.Impl
 {
-    public class GrpcTrackerClient : ITrackerClient, IDisposable
+    public class GrpcTrackerClient : IDisposable
     {
         private readonly string _address;
         private readonly int _port;
@@ -24,25 +21,25 @@ namespace CommLib
             _client = new GeoService.GeoServiceClient(_channel);
         }
         public void Dispose()
-        { 
+        {
             _channel?.ShutdownAsync().Wait();
             _channel?.Dispose();
         }
         public async Task<LocateByUUIDResponse> LocateByUUID(string uuid)
         {
-             return await _client.LocateByUUIDAsync(new LocateByUUIDRequest { Uuid = uuid });            
+            return await _client.LocateByUUIDAsync(new LocateByUUIDRequest { Uuid = uuid });
         }
 
         public async Task<TrackResponse> Track(string uuid, double latitude, double longitude)
         {
-            return await _client.TrackAsync(new TrackRequest 
-            { 
-                Uuid = uuid, 
-                Latlng = new LatLng 
-                { 
-                    Latitude = latitude, 
-                    Longitude = longitude 
-                } 
+            return await _client.TrackAsync(new TrackRequest
+            {
+                Uuid = uuid,
+                Latlng = new LatLng
+                {
+                    Latitude = latitude,
+                    Longitude = longitude
+                }
             });
         }
     }
